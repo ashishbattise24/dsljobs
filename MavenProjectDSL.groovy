@@ -1,4 +1,4 @@
-job('Mynewjobself') { 
+job('Mynewjobself-new') { 
   description("My self job ${new Date()}, from scm")
   scm {
      git("https://github.com/ashishbattise24/dsljobs.git", 'master')
