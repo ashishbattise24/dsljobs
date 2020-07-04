@@ -2,20 +2,20 @@ job('Mynewjobself') {
   description( "My self job ${new date()}, from scm")
 
 
-scm {
+  scm {
      git(https://github.com/ashishbattise24/dsljobs.git, 'master')
-}
+  }
 
-triggers { 
+  triggers { 
 
      scm('* * * * *')
-}
-steps {
+  }
+  steps {
 
    maven(clean package, 'maven-samples/single-module/pom.xml')
-}
-publishers{
-  archiveArtifacts '**/*.jar'
+  }
+  publishers{
+      archiveArtifacts '**/*.jar'
 
-}
+  }
 }
